@@ -12,20 +12,18 @@ class Deck:
         self.starting_deck = []
         self.playing_deck = []
         for suit in self.SUIT_TUPLE:
-            for rank, value in self.RANK_VALUE_DICT:
+            for rank, value in self.RANK_VALUE_DICT.items():
                 card = Card(window, rank, suit, value)
                 self.starting_deck.append(card)
         self.shuffle()
 
     def shuffle(self):
-        self.playing_deck = self.playing_deck.copy()
+        self.playing_deck = self.starting_deck.copy()
         for card in self.playing_deck:
             card.conceal()
         random.shuffle(self.playing_deck)
 
     def get_card(self):
-        if not self.playing_deck:
-            raise IndexError('No more cards')
         return self.playing_deck.pop()
 
     def add_card(self, card):

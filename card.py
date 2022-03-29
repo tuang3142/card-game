@@ -3,7 +3,7 @@ import pygwidgets
 
 
 class Card:
-    BACK_IMAGE = pygame.image.load('images/BackOfCard.png')
+    BACK_IMAGE = pygame.image.load('assets/images/BackOfCard.png')
 
     def __init__(self, window, rank, suit, value):
         self.window = window
@@ -11,7 +11,7 @@ class Card:
         self.suit = suit
         self.card_name = f'{rank} of {suit}'
         self.value = value
-        front_image_path = f'images/{self.card_name}.png'
+        front_image_path = f'assets/images/{self.card_name}.png'
         self.images = pygwidgets.ImageCollection(window, (0, 0),
                                                  {'front': front_image_path, 'back': self.BACK_IMAGE}, 'back')
 
