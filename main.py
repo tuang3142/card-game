@@ -1,13 +1,10 @@
-# 1 - Import packages
-import pygame
 from pygame.locals import *
-import pygwidgets
 import sys
 from game import *
 
 # 2 - Define constants
 WINDOW_WIDTH = 1000
-WINDOW_HEIGHT = 1000
+WINDOW_HEIGHT = 600
 FRAMES_PER_SECOND = 30
 
 
@@ -18,16 +15,11 @@ def main():
     clock = pygame.time.Clock()
 
     # 4 - Load assets: image(s), sound(s),  etc.
-    background = pygwidgets.Image(window, (0, 0),
-                                  'assets/images/background.png')
-    new_game_button = pygwidgets.TextButton(window, (20, 530),
-                                            'New Game', width=100, height=45)
-    higher_button = pygwidgets.TextButton(window, (540, 520),
-                                          'Higher', width=120, height=55)
-    lower_button = pygwidgets.TextButton(window, (340, 520),
-                                         'Lower', width=120, height=55)
-    quit_button = pygwidgets.TextButton(window, (880, 530),
-                                        'Quit', width=100, height=45)
+    background = pygwidgets.Image(window, (0, 0), 'assets/images/background.png')
+    new_game_button = pygwidgets.TextButton(window, (20, 530), 'New Game', width=100, height=45)
+    higher_button = pygwidgets.TextButton(window, (540, 520), 'Higher', width=120, height=55)
+    lower_button = pygwidgets.TextButton(window, (340, 520), 'Lower', width=120, height=55)
+    quit_button = pygwidgets.TextButton(window, (880, 530), 'Quit', width=100, height=45)
 
     # 5 - Initialize variables
     game = Game(window)
