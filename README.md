@@ -12,4 +12,6 @@ python 3, pygame, and pygwidgets
 
 - Download the entire project (including the assets)
 - `cd` to the project directory
-- Run `python main.py` 
+- Run `./start`, or `chmod +x start` to make it executable first
+- Alternatively, run `python3 main.py`
+
